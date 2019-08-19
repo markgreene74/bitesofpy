@@ -30,7 +30,7 @@ def extract_quotes(html: str = HTML) -> dict:
     """See instructions in the Bite description"""
     d = {}
     expr = re.compile(r'^\s*<p>.*"(.*)"\s\-\s(.*)</p>$')
-    for line in HTML.splitlines():
+    for line in html.splitlines():
         try:
             foundit = expr.search(line).groups()
             d[foundit[1]] = foundit[0]
