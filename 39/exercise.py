@@ -4,8 +4,8 @@ import re
 import urllib.request
 
 # getting the data
-COURSE_TIMES = os.path.join('/tmp', 'course_timings')
-urllib.request.urlretrieve('http://bit.ly/2Eb0iQF', COURSE_TIMES)
+COURSE_TIMES = os.path.join("/tmp", "course_timings")
+urllib.request.urlretrieve("http://bit.ly/2Eb0iQF", COURSE_TIMES)
 
 
 def get_all_timestamps():
@@ -21,7 +21,7 @@ def get_all_timestamps():
     """
     with open(COURSE_TIMES) as f:
         data = f.read()
-    return re.findall(r'\((\d+:\d+)\)', data)
+    return re.findall(r"\((\d+:\d+)\)", data)
 
 
 def calc_total_course_duration(timestamps):
@@ -29,7 +29,7 @@ def calc_total_course_duration(timestamps):
        and calculates the total duration as HH:MM:SS"""
     result = timedelta(minutes=0, seconds=0)
     for item in timestamps:
-        m, s = item.split(':')
+        m, s = item.split(":")
         td = timedelta(minutes=int(m), seconds=int(s))
         result += td
     return str(result)

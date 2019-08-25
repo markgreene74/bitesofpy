@@ -16,5 +16,5 @@ def print_game_stats(games_won=games_won):
     """
     for name in games_won.keys():
         number = games_won[name]
-        game_word = 'game' if number == 1 else 'games'
-        print(f'{name} has won {number} {game_word}')
+        game_word = "game" if number == 1 else "games"
+        print(f"{name} has won {number} {game_word}")

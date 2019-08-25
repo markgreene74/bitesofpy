@@ -1,8 +1,8 @@
 from datetime import datetime
 from pytz import timezone, utc
 
-AUSTRALIA = timezone('Australia/Sydney')
-SPAIN = timezone('Europe/Madrid')
+AUSTRALIA = timezone("Australia/Sydney")
+SPAIN = timezone("Europe/Madrid")
 
 
 def what_time_lives_pybites(naive_utc_dt):

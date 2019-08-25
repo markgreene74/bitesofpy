@@ -13,9 +13,9 @@ def create_parser():
     """For you to code:
        Create an ArgumentParser adding the right arguments to pass the tests,
        returns a argparse.ArgumentParser object"""
-    parser = argparse.ArgumentParser(description='Calculate your BMI.')
-    parser.add_argument('-w', '--weight', help='Your weight in kg', required=True)
-    parser.add_argument('-l', '--length', help='Your length in cm', required=True)
+    parser = argparse.ArgumentParser(description="Calculate your BMI.")
+    parser.add_argument("-w", "--weight", help="Your weight in kg", required=True)
+    parser.add_argument("-l", "--length", help="Your length in cm", required=True)
     return parser
 
 
@@ -29,8 +29,8 @@ def handle_args(args=None):
 
     if args.weight and args.length:
         bmi = calc_bmi(args.weight, args.length)
-        print(f'Your BMI is: {bmi}')
+        print(f"Your BMI is: {bmi}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     handle_args()

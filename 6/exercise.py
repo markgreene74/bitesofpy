@@ -6,17 +6,18 @@ import urllib.request
 
 # prep
 
-tempfile = os.path.join('/tmp', 'dirnames')
-urllib.request.urlretrieve('http://bit.ly/2ABUTjv', tempfile)
+tempfile = os.path.join("/tmp", "dirnames")
+urllib.request.urlretrieve("http://bit.ly/2ABUTjv", tempfile)
 
-IGNORE = 'static templates data pybites bbelderbos hobojoe1848'.split()
+IGNORE = "static templates data pybites bbelderbos hobojoe1848".split()
 
 users, popular_challenges = Counter(), Counter()
 
-Stats = namedtuple('Stats', 'user challenge')
+Stats = namedtuple("Stats", "user challenge")
 
 
-# code
+#  code
+
 
 def gen_files():
     """Return a generator of dir names reading in tempfile
@@ -34,8 +35,8 @@ def gen_files():
     """
     with open(tempfile) as f:
         for line in f:
-            if 'True' in line:
-                yield line.split(',')[0]
+            if "True" in line:
+                yield line.split(",")[0]
 
 
 def diehard_pybites():
@@ -46,8 +47,8 @@ def diehard_pybites():
        Stats(user='clamytoe', challenge=('01', 7))
     """
     bundle = list(gen_files())
-    users = Counter([x.split('/')[1] for x in bundle])
-    challenges = Counter([x.split('/')[0] for x in bundle])
+    users = Counter([x.split("/")[1] for x in bundle])
+    challenges = Counter([x.split("/")[0] for x in bundle])
     Stats.challenge = challenges.most_common(1)[0]
     for name in users.most_common():
         if name[0] not in IGNORE:

@@ -3,5 +3,5 @@ def tail(filepath, n):
        strip newlines and return a list of the last n lines"""
     with open(filepath) as f:
         file_data = f.read()
-    lines = file_data.split('\n')
-    return lines[len(lines)-n:]
+    lines = file_data.split("\n")
+    return lines[len(lines) - n :]

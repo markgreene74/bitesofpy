@@ -1,7 +1,7 @@
 def countdown_for(start=10):
     for i in reversed(range(1, start + 1)):
         print(i)
-    print('time is up')
+    print("time is up")
 
 
 def countdown_recursive(start=10):
@@ -9,4 +9,4 @@ def countdown_recursive(start=10):
         print("time is up")
     else:
         print(start)
-        countdown_recursive(start-1)
+        countdown_recursive(start - 1)

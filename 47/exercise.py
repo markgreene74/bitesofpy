@@ -3,11 +3,12 @@ import re
 
 PUNCTUATION_CHARS = list(string.punctuation)
 
-used_passwords = set('PassWord@1 PyBit$s9'.split())
+used_passwords = set("PassWord@1 PyBit$s9".split())
 
-c_digits = re.compile(r'[0-9]')
-c_lowercase = re.compile(r'[a-z]')
-c_uppercase = re.compile(r'[A-Z]')
+c_digits = re.compile(r"[0-9]")
+c_lowercase = re.compile(r"[a-z]")
+c_uppercase = re.compile(r"[A-Z]")
+
 
 def validate_password(password):
     global used_passwords

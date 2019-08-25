@@ -13,7 +13,7 @@ class User:
         """Return first separated by a whitespace
            and using title case for both.
         """
-        return f'{self.first_name.title()} {self.last_name.title()}'
+        return f"{self.first_name.title()} {self.last_name.title()}"
 
     @property
     def username(self):
@@ -27,7 +27,7 @@ class User:
         return self.first_name[0].lower() + self.last_name[:7].lower()
 
     def __str__(self):
-        return f'{self.get_full_name} ({self.username})' 
+        return f"{self.get_full_name} ({self.username})"
 
     def __repr__(self):
         """Don't hardcode the class name, hint: use a

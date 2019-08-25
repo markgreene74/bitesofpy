@@ -1,5 +1,5 @@
 def get_index_different_char(chars):
-    alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     d_alpha = {}
     d_non_alpha = {}
     # sort alpha from non alpha

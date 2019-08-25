@@ -5,9 +5,9 @@ def rgb_to_hex(rgb):
     converted = []
     for item in rgb:
         if 0 < item <= 255:
-            converted.append(hex(item).split('0x')[1].upper())
+            converted.append(hex(item).split("0x")[1].upper())
         elif item == 0:
-            converted.append('00')
+            converted.append("00")
         else:
-            raise ValueError('Out of range')
+            raise ValueError("Out of range")
     return f"#{''.join(converted)}"

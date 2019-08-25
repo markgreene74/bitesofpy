@@ -1,4 +1,4 @@
-VALID_COLORS = ['blue', 'yellow', 'red']
+VALID_COLORS = ["blue", "yellow", "red"]
 
 
 def print_colors():
@@ -9,7 +9,7 @@ def print_colors():
        - otherwise print the color in lower case."""
     while True:
         user_input = input("Enter a colour:\n").lower()
-        if user_input == 'quit':
+        if user_input == "quit":
             print("bye")
             break
         elif user_input not in VALID_COLORS:

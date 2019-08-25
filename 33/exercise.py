@@ -27,4 +27,9 @@ def transpose(data):
             list_since.append(item.since_days)
             list_karma.append(item.karma_points)
             list_bitecoin.append(item.bitecoin_earned)
-        return [tuple(list_names), tuple(list_since), tuple(list_karma), tuple(list_bitecoin)]
+        return [
+            tuple(list_names),
+            tuple(list_since),
+            tuple(list_karma),
+            tuple(list_bitecoin),
+        ]

@@ -1,16 +1,16 @@
 from random import choice
 
-COLORS = 'red blue green yellow brown purple'.split()
+COLORS = "red blue green yellow brown purple".split()
 
 
 class EggCreator:
 
-    '''Iterator that generates a <limit> number of eggs of random colours'''
+    """Iterator that generates a <limit> number of eggs of random colours"""
 
     def __init__(self, limit=1):
         self.num = limit
         self.count = 0
-        self.eggs = [choice(COLORS) + ' egg' for x in range(limit)]
+        self.eggs = [choice(COLORS) + " egg" for x in range(limit)]
 
     def __iter__(self):
         return self

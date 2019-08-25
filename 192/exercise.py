@@ -9,7 +9,7 @@ CRITICAL = "50"
 
 
 def log_it(level: Callable, msg: str) -> None:
-    logger = logging.getLogger('pybites_logger')
+    logger = logging.getLogger("pybites_logger")
     logger.log(int(level), msg)
 
 

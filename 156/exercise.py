@@ -1,10 +1,13 @@
 from collections import defaultdict
 
-CHARACTERS = ['Red Riding Hood',
-              # we're omitting 'mother' here for simplicity
-              # (= substring grandmother)
-              ('Grandmother', 'Grandma', 'Granny'),
-              'wolf', 'woodsman']
+CHARACTERS = [
+    "Red Riding Hood",
+    # we're omitting 'mother' here for simplicity
+    #  (= substring grandmother)
+    ("Grandmother", "Grandma", "Granny"),
+    "wolf",
+    "woodsman",
+]
 
 text = """
 Once upon a time, there was a little girl who lived in a village near the forest.  Whenever she went out, the little girl wore a red riding cloak, so everyone in the village called her Little Red Riding Hood.

@@ -24,8 +24,8 @@ def slice_and_dice(text=text):
        the results list. Make sure that you strip off any trailing
        exclamation marks (!) and dots (.), Return the results list."""
     results = []
-    partial = text.strip().lstrip().split('\n')
+    partial = text.strip().lstrip().split("\n")
     for line in partial:
         if line.strip().lstrip()[0] in ascii_lowercase:
-            results.append(line.split(' ')[-1].strip('!').strip('.'))
+            results.append(line.split(" ")[-1].strip("!").strip("."))
     return results

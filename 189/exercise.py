@@ -1,5 +1,5 @@
-IGNORE_CHAR = 'b'
-QUIT_CHAR = 'q'
+IGNORE_CHAR = "b"
+QUIT_CHAR = "q"
 MAX_NAMES = 5
 
 

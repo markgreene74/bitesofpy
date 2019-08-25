@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
 
-BITE_CREATED_DT = datetime.strptime('2018-02-26 23:24:04', '%Y-%m-%d %H:%M:%S')
-p2_retirement = datetime.strptime('2020-04-12 00:00:00', '%Y-%m-%d %H:%M:%S')
+BITE_CREATED_DT = datetime.strptime("2018-02-26 23:24:04", "%Y-%m-%d %H:%M:%S")
+p2_retirement = datetime.strptime("2020-04-12 00:00:00", "%Y-%m-%d %H:%M:%S")
+
 
 def py2_earth_hours_left():
     """Return how many hours, rounded to 2 decimals, Python 2 has

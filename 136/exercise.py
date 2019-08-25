@@ -62,14 +62,15 @@ def check_bt(donor, recipient):
     ## match and return True/False
     n_donor = converted[0]
     n_recipient = converted[1]
-    match = { 0: [0, 1, 2, 3, 4, 5, 6, 7],
-              1: [1, 3, 5, 7],
-              2: [2, 3, 6, 7],
-              3: [3, 7],
-              4: [4, 5, 6, 7],
-              5: [5, 7],
-              6: [6, 7],
-              7: [7]
+    match = {
+        0: [0, 1, 2, 3, 4, 5, 6, 7],
+        1: [1, 3, 5, 7],
+        2: [2, 3, 6, 7],
+        3: [3, 7],
+        4: [4, 5, 6, 7],
+        5: [5, 7],
+        6: [6, 7],
+        7: [7],
     }
     if n_recipient in match[n_donor]:
         return True

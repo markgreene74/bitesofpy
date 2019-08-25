@@ -23,7 +23,7 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 """
-vowels = 'aeiou'
+vowels = "aeiou"
 
 
 def strip_vowels(text: str) -> (str, int):
@@ -40,6 +40,6 @@ def strip_vowels(text: str) -> (str, int):
        The str/int types in the function defintion above are part
        of Python's new type hinting:
        https://docs.python.org/3/library/typing.html"""
-    newtext = re.sub('[aeiouAEIOU]', '*', text)
-    counter = len(re.findall('\*', newtext)) - len(re.findall('\*', text))
+    newtext = re.sub("[aeiouAEIOU]", "*", text)
+    counter = len(re.findall("\*", newtext)) - len(re.findall("\*", text))
     return newtext, counter

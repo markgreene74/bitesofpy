@@ -1,7 +1,7 @@
 import re
 
-VOWELS = list('aeiou')
-PYTHON = list('python')
+VOWELS = list("aeiou")
+PYTHON = list("python")
 
 
 def contains_only_vowels(input_str):
@@ -19,4 +19,4 @@ def contains_any_py_chars(input_str):
 def contains_digits(input_str):
     """Receives input string and checks if it contains
        one or more digits."""
-    return any(c for c in re.findall(r'\d+', input_str))
+    return any(c for c in re.findall(r"\d+", input_str))

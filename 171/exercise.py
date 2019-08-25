@@ -2,7 +2,7 @@ from itertools import cycle
 import sys
 from time import time, sleep
 
-SPINNER_STATES = ['-', '\\', '|', '/']  # had to escape \
+SPINNER_STATES = ["-", "\\", "|", "/"]  # had to escape \
 STATE_TRANSITION_TIME = 0.1
 
 
@@ -20,5 +20,5 @@ def spinner(seconds):
             break
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     spinner(2)

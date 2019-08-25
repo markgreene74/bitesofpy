@@ -1,4 +1,4 @@
-DEFAULT_SHELL = 'bash'
+DEFAULT_SHELL = "bash"
 # https://github.com/avar/git-anyonecanedit-etc/blob/master/passwd
 PASSWD_OUTPUT = """root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/bin/sh
@@ -35,9 +35,12 @@ ssh-rsa:x:1004:1004::/home/ssh-rsa:/bin/bash
 artagnon:x:1005:1005:Ramkumar R,,,,Git GSOC:/home/artagnon:/bin/bash"""
 
 
-def get_users_for_shell(passwd_output: str = PASSWD_OUTPUT,
-                        grep_shell: str = DEFAULT_SHELL) -> list:
+def get_users_for_shell(
+    passwd_output: str = PASSWD_OUTPUT, grep_shell: str = DEFAULT_SHELL
+) -> list:
     """Match the passwd_output string for users with grep_shell.
        Return a list of users.
     """
-    return sorted([i.split(":")[0] for i in passwd_output.split('\n') if "/" + grep_shell in i])
+    return sorted(
+        [i.split(":")[0] for i in passwd_output.split("\n") if "/" + grep_shell in i]
+    )

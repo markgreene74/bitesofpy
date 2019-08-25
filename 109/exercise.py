@@ -1,11 +1,13 @@
-workout_schedule = {'Friday': 'Shoulders',
-                    'Monday': 'Chest+biceps',
-                    'Saturday': 'Rest',
-                    'Sunday': 'Rest',
-                    'Thursday': 'Legs',
-                    'Tuesday': 'Back+triceps',
-                    'Wednesday': 'Core'}
-rest, chill, go_train = 'Rest', 'Chill out!', 'Go train {}'
+workout_schedule = {
+    "Friday": "Shoulders",
+    "Monday": "Chest+biceps",
+    "Saturday": "Rest",
+    "Sunday": "Rest",
+    "Thursday": "Legs",
+    "Tuesday": "Back+triceps",
+    "Wednesday": "Core",
+}
+rest, chill, go_train = "Rest", "Chill out!", "Go train {}"
 
 
 def get_workout_motd(day):

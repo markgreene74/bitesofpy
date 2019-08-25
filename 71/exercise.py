@@ -1,4 +1,4 @@
-class RecordScore():
+class RecordScore:
 
     """Class to track a game's maximum score"""
 
@@ -10,7 +10,7 @@ class RecordScore():
         return max(self.score)
 
     def __str__(self):
-        return ', '.join([str(i) for i in sorted(self.score, reverse=True)])
+        return ", ".join([str(i) for i in sorted(self.score, reverse=True)])
 
     def __repr__(self):
         return str(self.score)

@@ -5,5 +5,5 @@ def wc(file_):
        (both tabs and spaces are allowed as separator)"""
     with open(file_) as f:
         file_data = f.read()
-    nl = '\n'
+    nl = "\n"
     return f"{len(file_data.split(nl))} {len(file_data.split())} {len(file_data)} {str(file_)}"

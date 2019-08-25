@@ -3,9 +3,9 @@ import statistics as st
 from urllib.request import urlretrieve
 
 
-STATS = path.join('/tmp', 'testfiles_number_loc.txt')
+STATS = path.join("/tmp", "testfiles_number_loc.txt")
 if not path.isfile(STATS):
-    urlretrieve('https://bit.ly/2Jp5CUt', STATS)
+    urlretrieve("https://bit.ly/2Jp5CUt", STATS)
 
 STATS_OUTPUT = """
 Basic statistics:
@@ -47,15 +47,16 @@ def create_stats_report(data=None):
 
     # TODO 2: complete this dict, use data list and
     # for the last 3 sample_ variables, use sample list
-    stats = dict(count=len(data),
-                 min_=min(data),
-                 max_=max(data),
-                 mean=st.mean(data),
-                 pstdev=st.pstdev(data),
-                 pvariance=st.pvariance(data),
-                 sample_count=len(sample),
-                 sample_stdev=st.stdev(sample),
-                 sample_variance=st.variance(sample),
-                 )
+    stats = dict(
+        count=len(data),
+        min_=min(data),
+        max_=max(data),
+        mean=st.mean(data),
+        pstdev=st.pstdev(data),
+        pvariance=st.pvariance(data),
+        sample_count=len(sample),
+        sample_stdev=st.stdev(sample),
+        sample_variance=st.variance(sample),
+    )
 
     return STATS_OUTPUT.format(**stats)

@@ -1,18 +1,14 @@
 from collections import namedtuple
 from datetime import datetime
 
-Composer = namedtuple('Composer', 'name born died')
-Opera = namedtuple('Opera', 'author play date')
+Composer = namedtuple("Composer", "name born died")
+Opera = namedtuple("Opera", "author play date")
 
 composers = {
-    "beethoven": Composer("Ludwig van Beethoven",
-                          "17 December 1770", "26 March 1827"),
-    "wagner": Composer("Richard Wagner",
-                       "22 May 1813", "13 February 1883"),
-    "verdi": Composer("Giuseppe Verdi",
-                      "9 October 1813", "27 January 1901"),
-    "mozart": Composer("Wolfgang Amadeus Mozart",
-                       "27 January 1756", "5 December 1791"),
+    "beethoven": Composer("Ludwig van Beethoven", "17 December 1770", "26 March 1827"),
+    "wagner": Composer("Richard Wagner", "22 May 1813", "13 February 1883"),
+    "verdi": Composer("Giuseppe Verdi", "9 October 1813", "27 January 1901"),
+    "mozart": Composer("Wolfgang Amadeus Mozart", "27 January 1756", "5 December 1791"),
 }
 
 operas = [
