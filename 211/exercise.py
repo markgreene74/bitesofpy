@@ -21,7 +21,6 @@ def retry(func):
     #
     @wraps(func)
     def wrapper(*args, **kwargs):
-        attempts = 0
         for attempts in range(MAX_RETRIES):
             try:
                 return func(*args, **kwargs)
