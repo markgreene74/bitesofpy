@@ -5,7 +5,7 @@ from functools import lru_cache
 
 
 def cached_property(func):
-    """decorator used to cache expensive object attribute lookup"""
+    """not a decorator - used to cache expensive object attribute lookup"""
     return func()
 
 
