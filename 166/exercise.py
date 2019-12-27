@@ -6,9 +6,8 @@ import configparser
 class ToxIniParser:
     def __init__(self, ini_file):
         """Use configparser to load ini_file into self.config"""
-        _config = configparser.ConfigParser()
-        _config.read(ini_file)
-        self.config = _config
+        self.config = configparser.ConfigParser()
+        self.config.read(ini_file)
 
     @property
     def number_of_sections(self):
