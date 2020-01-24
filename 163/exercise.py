@@ -23,9 +23,9 @@ def changed_dependencies(old_reqs: str, new_reqs: str) -> list:
     result = []
     old = parser_helper(old_reqs)
     new = parser_helper(new_reqs)
-    for old_name, old_version in old.items():
-        if new.get(old_name) > old_version:
-            result.append(old_name)
+    for pkg_name, old_version in old.items():
+        if new.get(pkg_name) > old_version:
+            result.append(pkg_name)
     return result
 
 '''
