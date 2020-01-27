@@ -29,9 +29,10 @@ def person_max_bmi(data=data):
     """Return (name, BMI float) of the character in data that
        has the highest BMI (rounded on 2 decimals)"""
     characters = defaultdict(float)
-    rd = reader(data.splitlines())
-    for chr in rd:
-        _bmi = float(chr[2]) / ((int(chr[1]) / 100) ** 2)
-        characters[chr[0].strip()] = round(_bmi, 2)
+
+    for line in reader(data.splitlines()):
+        _bmi = float(line[2]) / ((int(line[1]) / 100) ** 2)
+        characters[line[0].strip()] = round(_bmi, 2)
+
     thewinner = max(characters, key=characters.get)
     return thewinner, characters[thewinner]
