@@ -33,12 +33,10 @@ def get_similarities(tags=None):
     tags = tags or _get_tags()
     # do your thing ...
     _combinations = [i for i in itertools.combinations(tags, 2)]
-    _similar = [
-        i
-        for i in _combinations
-        if SequenceMatcher(lambda x: x == " ", i[0], i[1]).ratio() >= SIMILAR
-    ]
-    return _similar
+    for i in _combinations:
+        similarity = SequenceMatcher(lambda x: x == " ", *i).ratio()
+        if similarity >= SIMILAR:
+            yield i
 
 '''
 Resolution time: ~36 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 32 min. 💪
