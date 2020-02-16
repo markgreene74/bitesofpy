@@ -19,7 +19,7 @@ def create_paw_deck(n=8):
     n_cards = n * len(NUMBERS)
     random_actions = random.sample(range(1, n_cards), n_cards // 4)
 
-    result =[]
+    result = []
     for i, p in enumerate(product(letters, NUMBERS)):
         # 'ABCD ...' x 1234
         # ('A', 1), ('A', 2), ('A', 3), ('A', 4), ('B', 1), ('B', 2) ...
