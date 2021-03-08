@@ -42,6 +42,7 @@ class Child(Father, Mother):
         _str = f"I am {self.new_identity}"
         return _str
 
+
 # person = Person()
 # dad = Father()
 # mom = Mother()

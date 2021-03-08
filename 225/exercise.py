@@ -3,7 +3,7 @@ PYBITES = "pybites"
 
 def convert_pybites_chars(text):
     """Swap case all characters in the word pybites for the given text.
-       Return the resulting string."""
+    Return the resulting string."""
     # this is one way to solve the exercise:
     # result = []
     # for char in text:

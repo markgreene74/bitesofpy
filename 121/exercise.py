@@ -10,7 +10,7 @@ def _has_repetition(astring):
 
 def password_complexity(password):
     """Input: password string, calculate score according to 5 criteria in bite,
-       return: score int"""
+    return: score int"""
     score = 0
     _lowercase = re.compile(r"[a-z]+")
     _uppercase = re.compile(r"[A-Z]+")

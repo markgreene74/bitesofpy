@@ -4,8 +4,8 @@ from collections import defaultdict
 
 def parser_helper(reqs: str) -> dict:
     """Parse a requirement multiline string and
-       return a dictionary of packages as keys
-       and version (tuple) as value
+    return a dictionary of packages as keys
+    and version (tuple) as value
     """
     result = defaultdict(tuple)
     for pkg in reqs.strip().splitlines():
@@ -17,8 +17,8 @@ def parser_helper(reqs: str) -> dict:
 
 def changed_dependencies(old_reqs: str, new_reqs: str) -> list:
     """Compare old vs new requirement multiline strings
-       and return a list of dependencies that have been upgraded
-       (have a newer version)
+    and return a list of dependencies that have been upgraded
+    (have a newer version)
     """
     result = []
     old = parser_helper(old_reqs)
@@ -28,6 +28,7 @@ def changed_dependencies(old_reqs: str, new_reqs: str) -> list:
             result.append(pkg_name)
     return result
 
-'''
+
+"""
 Resolution time: ~54 min. (...) - awesome, you solved it in 26 min. 💪
-'''
+"""

@@ -10,6 +10,6 @@ def cached_fib(n):
     return cached_fib(n - 1) + cached_fib(n - 2)
 
 
-'''
+"""
 Resolution time: ~25 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 10 min. 💪
-'''
+"""

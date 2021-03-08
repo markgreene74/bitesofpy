@@ -8,7 +8,7 @@ START_EMOJI_RANGE = 100000  # estimate
 
 def what_means_emoji(emoji):
     """Receives emoji and returns its meaning,
-       in case of a TypeError return 'Not found'"""
+    in case of a TypeError return 'Not found'"""
     try:
         return unicodedata.name(emoji)
     except TypeError:
@@ -17,8 +17,8 @@ def what_means_emoji(emoji):
 
 def _make_emoji_mapping():
     """Helper to make a mapping of all possible emojis:
-       - loop through range(START_EMOJI_RANGE, sys.maxunicode +1)
-       - return dict with keys=emojis, values=names"""
+    - loop through range(START_EMOJI_RANGE, sys.maxunicode +1)
+    - return dict with keys=emojis, values=names"""
     d = dict()
     for i in range(START_EMOJI_RANGE, sys.maxunicode + 1):
         try:
@@ -30,7 +30,7 @@ def _make_emoji_mapping():
 
 def find_emoji(term):
     """Return emojis and their texts that match (case insensitive)
-       term, print matches to console"""
+    term, print matches to console"""
     term = term.lower()
 
     emoji_mapping = _make_emoji_mapping()

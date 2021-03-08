@@ -5,19 +5,19 @@ BLANK = " "
 
 def gen_rhombus(width):
     """Create a generator that yields the rows of a rhombus row
-       by row. So if width = 5 it should generate the following
-       rows one by one:
+    by row. So if width = 5 it should generate the following
+    rows one by one:
 
-       gen = gen_rhombus(5)
-       for row in gen:
-           print(row)
+    gen = gen_rhombus(5)
+    for row in gen:
+        print(row)
 
-        output:
-          *
-         ***
-        *****
-         ***
-          *
+     output:
+       *
+      ***
+     *****
+      ***
+       *
     """
     # assume width is odd as per the exercise
     top_half = []
@@ -29,6 +29,7 @@ def gen_rhombus(width):
     bottom_half = top_half[-2::-1]
     return top_half + bottom_half
 
-'''
+
+"""
 Resolution time: ~58 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 19 min. 💪
-'''
+"""

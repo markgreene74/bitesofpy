@@ -80,6 +80,6 @@ def shorten_url(url: str, next_record: int) -> str:
     return f"{SITE}/{_encoded}"
 
 
-'''
+"""
 Resolution time: ~67 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 43 min. 💪
-'''
+"""

@@ -19,7 +19,7 @@ urlretrieve("https://bites-data.s3.us-east-2.amazonaws.com/tags.xml", TEMPFILE)
 
 def _get_tags(tempfile=TEMPFILE):
     """Helper to parse all tags from a static copy of PyBites' feed,
-       providing this here so you can focus on difflib"""
+    providing this here so you can focus on difflib"""
     with open(tempfile) as f:
         content = f.read().lower()
     # take a small subset to keep it performant
@@ -38,6 +38,7 @@ def get_similarities(tags=None):
         if similarity >= SIMILAR:
             yield i
 
-'''
+
+"""
 Resolution time: ~36 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 32 min. 💪
-'''
+"""

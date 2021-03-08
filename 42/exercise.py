@@ -22,20 +22,20 @@ class Game:
         self._end = END
 
     def _raise_w_message(self, message):
-        """ This is a very simple helper that prints out the specific
-            problem and then raise an error
+        """This is a very simple helper that prints out the specific
+        problem and then raise an error
         """
         print(message)
         raise ValueError
 
     def guess(self):
         """Ask user for input, convert to int, raise ValueError outputting
-           the following errors when applicable:
-           'Please enter a number'
-           'Should be a number'
-           'Number not in range'
-           'Already guessed'
-           If all good, return the int"""
+        the following errors when applicable:
+        'Please enter a number'
+        'Should be a number'
+        'Number not in range'
+        'Already guessed'
+        If all good, return the int"""
         # get the user input
         input_msg = f"Guess a number between {self._start} and {self._end}: "
         user_input = input(input_msg)
@@ -62,10 +62,10 @@ class Game:
 
     def _validate_guess(self, guess):
         """Verify if guess is correct, print the following when applicable:
-           {guess} is correct!
-           {guess} is too low
-           {guess} is too high
-           Return a boolean"""
+        {guess} is correct!
+        {guess} is too low
+        {guess} is too high
+        Return a boolean"""
         if guess == self._answer:
             print(f"{guess} is correct!")
             self._win = True
@@ -77,7 +77,7 @@ class Game:
 
     def __call__(self):
         """Entry point / game loop, use a loop break/continue,
-           see the tests for the exact win/lose messaging"""
+        see the tests for the exact win/lose messaging"""
         counter = 1
         while counter <= 5:
             try:

@@ -5,8 +5,8 @@ from typing import List, Set
 
 def timing(f):
     """A simple timer decorator to print the elapsed time of
-       the execution of the function it wraps.
-       Returns (timing, result) tuple"""
+    the execution of the function it wraps.
+    Returns (timing, result) tuple"""
 
     @wraps(f)
     def wrapper(*args, **kwargs):

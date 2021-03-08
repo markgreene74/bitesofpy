@@ -56,7 +56,7 @@ def get_movies_by_director():
 
 def calc_mean_score(movies):
     """Helper method to calculate mean of list of Movie namedtuples,
-       round the mean to 1 decimal place"""
+    round the mean to 1 decimal place"""
 
     total_score = float(0)
     for movie in movies:
@@ -68,9 +68,9 @@ def calc_mean_score(movies):
 
 def get_average_scores(directors):
     """Iterate through the directors dict (returned by get_movies_by_director),
-       return a list of tuples (director, average_score) ordered by highest
-       score in descending order. Only take directors into account
-       with >= MIN_MOVIES"""
+    return a list of tuples (director, average_score) ordered by highest
+    score in descending order. Only take directors into account
+    with >= MIN_MOVIES"""
 
     result = []
 

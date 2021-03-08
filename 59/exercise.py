@@ -1,7 +1,7 @@
 class MultiplicationTable:
     def __init__(self, length):
         """Create a 2D self._table of (x, y) coordinates and
-           their calculations (form of caching)"""
+        their calculations (form of caching)"""
         self.length = length
         self._table = []
         for x in range(1, self.length + 1):

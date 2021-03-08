@@ -55,6 +55,6 @@ if __name__ == "__main__":
     coder = Employee("Joe", "Blow", 5, 8, 18.0)
     print(coder.weekly_pay)
 
-'''
+"""
 Resolution time: ~32 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 14 min. 💪
-'''
+"""

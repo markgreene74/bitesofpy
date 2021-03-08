@@ -22,4 +22,3 @@ def zip_last_n_files(
             old_filename = Path(i).name.split(".")[0]
             new_filename = old_filename + f"_{str(file_mtime)}.log"
             myzip.write(i, new_filename)
-

@@ -5,16 +5,16 @@ from itertools import islice
 
 def group(iterable, n):
     """Splits an iterable set into groups of size n and a group
-       of the remaining elements if needed.
+    of the remaining elements if needed.
 
-       Args:
-         iterable (list): The list whose elements are to be split into
-                          groups of size n.
-         n (int): The number of elements per group.
+    Args:
+      iterable (list): The list whose elements are to be split into
+                       groups of size n.
+      n (int): The number of elements per group.
 
-       Returns:
-         list: The list of groups of size n,
-               where each group is a list of n elements.
+    Returns:
+      list: The list of groups of size n,
+            where each group is a list of n elements.
     """
     # this won't pass the test for tuples, generators
     # return [iterable[i : i + n] for i in range(0, len(iterable), n)]

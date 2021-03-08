@@ -18,11 +18,11 @@ keep enjoying our bites!
 
 def slice_and_dice(text=text):
     """Strip the whitespace (newlines) off text at both ends,
-       split the text string on newline (\n).
-       Next check if the first char of each (stripped) line is lowercase,
-       if so split the line into words and append the last word to
-       the results list. Make sure that you strip off any trailing
-       exclamation marks (!) and dots (.), Return the results list."""
+    split the text string on newline (\n).
+    Next check if the first char of each (stripped) line is lowercase,
+    if so split the line into words and append the last word to
+    the results list. Make sure that you strip off any trailing
+    exclamation marks (!) and dots (.), Return the results list."""
     results = []
     partial = text.strip().lstrip().split("\n")
     for line in partial:

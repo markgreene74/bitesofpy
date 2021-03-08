@@ -8,6 +8,6 @@ def freq_digit(num: int) -> int:
     return int(n)
 
 
-'''
+"""
 Resolution time: ~30 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 7 min. 💪
-'''
+"""

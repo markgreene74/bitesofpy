@@ -38,7 +38,7 @@ def sysinfo_scrape(output):
     return result
 
 
-'''
+"""
 50 out of 50 users completed this Bite.
 Resolution time: ~44 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 20 min. 💪
-'''
+"""

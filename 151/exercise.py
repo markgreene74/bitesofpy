@@ -52,19 +52,19 @@ def _get_date(date_str):
 
 def operas_both_at_premiere(guest, composer):
     """Retrieves a list of titles of operas, where the guest and the composer
-       could have been together at premiere.
+    could have been together at premiere.
 
-       That is the Opera.author matches the composer passed in, and both guest
-       and composer are alive at the time of Opera.date.
+    That is the Opera.author matches the composer passed in, and both guest
+    and composer are alive at the time of Opera.date.
 
-       If guest and/or composer are not in the composers dict, raise a
-       ValueError
+    If guest and/or composer are not in the composers dict, raise a
+    ValueError
 
-       Args:
-       guest (str): one of the composers but not the author of an opera
-       composer (str): the author of an opera
+    Args:
+    guest (str): one of the composers but not the author of an opera
+    composer (str): the author of an opera
 
-       Returns a list (or generator) of titles of operas.
+    Returns a list (or generator) of titles of operas.
     """
     # start with the obvious, check guest and composer
     # and if they are valid save the DOB/DOD

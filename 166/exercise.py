@@ -12,14 +12,14 @@ class ToxIniParser:
     @property
     def number_of_sections(self):
         """Return the number of sections in the ini file.
-           New to properties? -> https://pybit.es/property-decorator.html
+        New to properties? -> https://pybit.es/property-decorator.html
         """
         return len(self.config.sections())
 
     @property
     def environments(self):
         """Return a list of environments
-           (= "envlist" attribute of [tox] section)"""
+        (= "envlist" attribute of [tox] section)"""
         _env_str = self.config["tox"]["envlist"].replace(",", " ")
         return [i.strip() for i in _env_str.split()]
 

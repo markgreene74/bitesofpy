@@ -27,7 +27,7 @@ Estimated variance for sample:
 
 def get_all_line_counts(data: str = STATS) -> list:
     """Get all 186 line counts from the STATS file,
-       returning a list of ints"""
+    returning a list of ints"""
     # TODO 1: get the 186 ints from downloaded STATS file
     with open(data) as f:
         read_data = f.read()

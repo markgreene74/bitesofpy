@@ -15,17 +15,17 @@ def load_dictionary():
 
 def is_palindrome(word):
     """Return if word is palindrome, 'madam' would be one.
-       Case insensitive, so Madam is valid too.
-       It should work for phrases too so strip all but alphanumeric chars.
-       So "No 'x' in 'Nixon'" should pass (see tests for more)"""
+    Case insensitive, so Madam is valid too.
+    It should work for phrases too so strip all but alphanumeric chars.
+    So "No 'x' in 'Nixon'" should pass (see tests for more)"""
     stripped_word = [i.lower() for i in word if i.isalpha()]
     return stripped_word == stripped_word[::-1]
 
 
 def get_longest_palindrome(words=None):
     """Given a list of words return the longest palindrome
-       If called without argument use the load_dictionary helper
-       to populate the words list"""
+    If called without argument use the load_dictionary helper
+    to populate the words list"""
     if not words:
         words = load_dictionary()
     palindrome_words = []

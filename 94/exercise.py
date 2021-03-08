@@ -18,7 +18,7 @@ Video = namedtuple("Video", "id title duration metrics")
 
 def load_pycon_data(pycon_videos=pycon_videos):
     """Load the pickle file (pycon_videos) and return the data structure
-       it holds"""
+    it holds"""
     with open(pycon_videos, "rb") as f:
         return pickle.load(f)
 
@@ -39,9 +39,9 @@ def get_most_popular_talks_by_views(videos):
 
 def get_most_popular_talks_by_like_ratio(videos):
     """Return the pycon video list sorted by most likes relative to
-       number of views, so 10 likes on 175 views ranks higher than
-       12 likes on 300 views. Discount the dislikeCount from the likeCount.
-       Return the filtered list"""
+    number of views, so 10 likes on 175 views ranks higher than
+    12 likes on 300 views. Discount the dislikeCount from the likeCount.
+    Return the filtered list"""
     return sorted(
         videos,
         key=lambda x: (int(x.metrics["likeCount"]) - int(x.metrics["dislikeCount"]))
@@ -57,7 +57,7 @@ def get_talks_gt_one_hour(videos):
 
 def get_talks_lt_twentyfour_min(videos):
     """Filter videos list down to videos that have a duration of less than
-       24 minutes"""
+    24 minutes"""
     result = []
     for v in videos:
         # parse 'PT1H56M1S'

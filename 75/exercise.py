@@ -4,7 +4,7 @@ wdays = {0: "Su", 1: "Mo", 2: "Tu", 3: "We", 4: "Th", 5: "Fr", 6: "Sa"}
 
 def get_weekdays(calendar_output):
     """Receives a multiline Unix cal output and returns a mapping (dict) where
-       keys are int days and values are the 2 letter weekdays (Su Mo Tu ...)"""
+    keys are int days and values are the 2 letter weekdays (Su Mo Tu ...)"""
     result = dict()
     lines = calendar_output.splitlines()
 

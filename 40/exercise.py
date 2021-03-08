@@ -20,6 +20,7 @@ def binary_search(sequence, target):
     # if we made it to this point the target is not in the sequence
     return None
 
-'''
+
+"""
 Resolution time: ~50 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 12 min. 💪
-'''
+"""

@@ -39,7 +39,7 @@ def get_users_for_shell(
     passwd_output: str = PASSWD_OUTPUT, grep_shell: str = DEFAULT_SHELL
 ) -> list:
     """Match the passwd_output string for users with grep_shell.
-       Return a list of users.
+    Return a list of users.
     """
     return sorted(
         [i.split(":")[0] for i in passwd_output.split("\n") if "/" + grep_shell in i]

@@ -17,8 +17,8 @@ holidays = defaultdict(list)
 
 def get_us_bank_holidays(content=content):
     """Receive scraped html output, make a BS object, parse the bank
-       holiday table (css class = list-table), and return a dict of
-       keys -> months and values -> list of bank holidays"""
+    holiday table (css class = list-table), and return a dict of
+    keys -> months and values -> list of bank holidays"""
     html = BeautifulSoup(content, "html.parser")
     find_class = html.find(class_="list-table")
 

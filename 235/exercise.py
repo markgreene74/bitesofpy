@@ -32,6 +32,7 @@ def get_bite_with_fastest_avg_test(timings: list) -> str:
 
     return sorted(all_tests.keys(), key=lambda x: all_tests[x].ratio)[0]
 
+
 """
 🥳 You are awesome! You earned the PyBites Black Ninja Belt! 🎉
 """

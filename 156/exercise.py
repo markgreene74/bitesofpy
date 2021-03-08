@@ -58,11 +58,11 @@ def make_a_list(something):
 
 def make_character_index(text=text, characters=CHARACTERS):
     """Return a dict with keys are characters (lowercased) and values
-       the lines they appear in sorted order.
-       Matches should be case insensitive.
-       If a character has multiple synonyms
-       - e.g. ('Grandmother', 'Grandma', 'Granny') -
-       then return the former as key.
+    the lines they appear in sorted order.
+    Matches should be case insensitive.
+    If a character has multiple synonyms
+    - e.g. ('Grandmother', 'Grandma', 'Granny') -
+    then return the former as key.
     """
     # create the empty dictionary
     result = defaultdict(list)

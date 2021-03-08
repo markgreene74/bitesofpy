@@ -18,6 +18,7 @@ def two_sums(numbers: list, target: int) -> tuple:
 
     return sorted(list_sums, key=lambda x: numbers[x[0]])[0]
 
-'''
+
+"""
 Resolution time: ~42 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 16 min. 💪
-'''
+"""

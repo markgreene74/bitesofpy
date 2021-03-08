@@ -7,7 +7,7 @@ TIMEZONES = set(pytz.all_timezones)
 
 def within_schedule(utc, *timezones):
     """Receive a utc datetime and one or more timezones and check if
-       they are all within schedule (MEETING_HOURS)"""
+    they are all within schedule (MEETING_HOURS)"""
     all_tzs = [utc.astimezone(pytz.utc).hour]
     for i in timezones:
         # check if i is a valid timezone

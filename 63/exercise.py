@@ -7,8 +7,8 @@ State = namedtuple("State", "color command timeout")
 
 def traffic_light():
     """Returns an itertools.cycle iterator that
-       when iterated over returns State namedtuples
-       as shown in the Bite's description"""
+    when iterated over returns State namedtuples
+    as shown in the Bite's description"""
     states = [
         State(color="red", command="Stop", timeout=2),
         State(color="green", command="Go", timeout=2),

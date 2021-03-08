@@ -18,7 +18,7 @@ TIME_OFFSETS = (
 
 def pretty_date(date):
     """Receives a datetime object and converts/returns a readable string
-       using TIME_OFFSETS"""
+    using TIME_OFFSETS"""
     # check if date is valid
     if not isinstance(date, datetime) or NOW < date:
         raise ValueError("Date is invalid or in the future")

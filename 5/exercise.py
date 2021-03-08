@@ -40,7 +40,7 @@ def sort_by_surname_desc(names):
 
 def shortest_first_name(names):
     """Returns the shortest first name (str).
-       You can assume there is only one shortest name.
+    You can assume there is only one shortest name.
     """
     names = dedup_and_title_case_names(names)
     # extract first names

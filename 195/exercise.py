@@ -64,7 +64,7 @@ if DB.stat().st_size == 0:
 
 def player_with_max_points_per_game():
     """The player with highest average points per game (don't forget to CAST to
-       numeric in your SQL query)"""
+    numeric in your SQL query)"""
     _query = cur.execute("SELECT name, avg_points FROM players")
     _dict = {}
     for row in _query:
@@ -83,13 +83,13 @@ def number_of_players_from_duke():
 
 def avg_years_active_players_stanford():
     """Return the average years that players from "Stanford University
-       are active ("active" column)"""
+    are active ("active" column)"""
     _query = cur.execute(
         'SELECT active FROM players WHERE college == "Stanford University"'
     )
     _list = []
     for row in _query:
-        _years_active, = row
+        (_years_active,) = row
         _list.append(int(_years_active))
     result = sum(_list) / len(_list)
     return round(result, 2)

@@ -6,8 +6,8 @@ from typing import List
 
 def get_time(timestamp_str: str) -> float:
     """This helper function process a timestamp string like
-       for example: '00:00:00,000 --> 00:00:01,000'
-       and returns the number of seconds as float
+    for example: '00:00:00,000 --> 00:00:01,000'
+    and returns the number of seconds as float
     """
     start_str, end_str = timestamp_str.replace("-->", "").split()
     start = datetime.strptime(start_str, "%H:%M:%S,%f")
@@ -20,27 +20,27 @@ def get_time(timestamp_str: str) -> float:
 
 def get_srt_section_ids(text: str) -> List[int]:
     """Parse a caption (srt) text passed in and return a
-       list of section numbers ordered descending by
-       highest speech speed
-       (= ratio of "time past:characters spoken")
+    list of section numbers ordered descending by
+    highest speech speed
+    (= ratio of "time past:characters spoken")
 
-       e.g. this section:
+    e.g. this section:
 
-       1
-       00:00:00,000 --> 00:00:01,000
-       let's code
+    1
+    00:00:00,000 --> 00:00:01,000
+    let's code
 
-       (10 chars in 1 second)
+    (10 chars in 1 second)
 
-       has a higher ratio then:
+    has a higher ratio then:
 
-       2
-       00:00:00,000 --> 00:00:03,000
-       code
+    2
+    00:00:00,000 --> 00:00:03,000
+    code
 
-       (4 chars in 3 seconds)
+    (4 chars in 3 seconds)
 
-       You can ignore milliseconds for this exercise.
+    You can ignore milliseconds for this exercise.
     """
     # create a namedtuple to store each entry (caption) data
     Entry = namedtuple("Entry", ["time", "length", "speed"])
@@ -69,6 +69,7 @@ def get_srt_section_ids(text: str) -> List[int]:
     )
 
     return sorted_results
+
 
 """
 I am the 9th Pythonista who cracked Bite 291.

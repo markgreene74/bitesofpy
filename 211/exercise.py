@@ -10,7 +10,7 @@ class MaxRetriesException(Exception):
 
 def retry(func):
     """Complete this decorator, make sure
-       you print the exception thrown"""
+    you print the exception thrown"""
     # ... retry MAX_RETRIES times
     # ...
     # make sure you include this for testing:

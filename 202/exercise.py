@@ -14,9 +14,9 @@ if not stats.exists():
 
 def get_most_complex_bites(N=10, stats=stats):
     """Parse the bites.csv file (= stats variable passed in), see example
-       output in the Bite description.
-       Return a list of Bite IDs (int or str values are fine) of the N
-       most complex Bites.
+    output in the Bite description.
+    Return a list of Bite IDs (int or str values are fine) of the N
+    most complex Bites.
     """
     with open(stats, encoding="utf-8-sig") as f:
         reader = csv.DictReader(f.readlines(), delimiter=";")

@@ -13,6 +13,7 @@ def major_n_minor(numbers):
     minor, _ = c.most_common()[-1]
     return major, minor
 
-'''
+
+"""
 Resolution time: ~22 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 9 min. 💪
-'''
+"""

@@ -29,26 +29,22 @@ def get_slice_inclusive(ser: pd.Series, start: int, end: int) -> pd.core.series.
 
 
 def return_head(ser: pd.Series, num: int) -> pd.core.series.Series:
-    """Return the first num elements of the given Series.
-    """
+    """Return the first num elements of the given Series."""
     return ser.head(num)
 
 
 def return_tail(ser: pd.Series, num: int) -> pd.core.series.Series:
-    """Return the last num elements of the given Series.
-    """
+    """Return the last num elements of the given Series."""
     return ser.tail(num)
 
 
 def get_index(ser: pd.Series) -> pd.core.indexes.base.Index:
-    """Return all indexes of the given Series.
-    """
+    """Return all indexes of the given Series."""
     return ser.index
 
 
 def get_values(ser: pd.Series) -> np.ndarray:
-    """Return all the values of the given Series.
-    """
+    """Return all the values of the given Series."""
     return ser.values
 
 

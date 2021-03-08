@@ -13,10 +13,10 @@ class DateFormat(Enum):
 
     @classmethod
     def get_d_parse_formats(cls, val=None):
-        """ Arg:
+        """Arg:
         val(int | None) enum member value
         Returns:
-        1. for val=None a list of explicit format strings 
+        1. for val=None a list of explicit format strings
             for all supported date formats in this enum
         2. for val=n an explicit format string for a given enum member value
         """
@@ -30,13 +30,13 @@ class DateFormat(Enum):
 
 class InfDateFmtError(Exception):
     """custom exception when it is not possible to infer a date format
-    e.g. too many NONPARSABLE or a tie """
+    e.g. too many NONPARSABLE or a tie"""
 
     pass
 
 
 def _maybe_DateFormats(date_str):
-    """ Args:
+    """Args:
     date_str (str) string representing a date in unknown format
     Returns:
     a list of enum members, where each member represents
@@ -58,7 +58,7 @@ def _maybe_DateFormats(date_str):
 
 
 def get_dates(dates):
-    """ Args:
+    """Args:
     dates (list) list of date strings
     where each list item represents a date in unknown format
     Returns:

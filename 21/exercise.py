@@ -19,8 +19,8 @@ def get_first_model_each_manufacturer(cars=cars):
 
 def get_all_matching_models(cars=cars, grep="trail"):
     """return a list of all models containing the case insensitive
-       'grep' string which defaults to 'trail' for this exercise,
-       sort the resulting sequence alphabetically"""
+    'grep' string which defaults to 'trail' for this exercise,
+    sort the resulting sequence alphabetically"""
     newlist = []
     for x in cars.values():
         for y in x:

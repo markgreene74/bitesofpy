@@ -3,7 +3,7 @@ import re
 
 def extract_course_times():
     """Write a regular expression that returns a list of timestamps:
-        ['01:47', '32:03', '41:51', '27:48', '05:02']"""
+    ['01:47', '32:03', '41:51', '27:48', '05:02']"""
     flask_course = (
         "Introduction 1 Lecture 01:47"
         "The Basics 4 Lectures 32:03"
@@ -17,7 +17,7 @@ def extract_course_times():
 
 def get_all_hashtags_and_links():
     """Write a regular expression that returns this list:
-       ['http://pybit.es/requests-cache.html', '#python', '#APIs']"""
+    ['http://pybit.es/requests-cache.html', '#python', '#APIs']"""
     tweet = (
         "New PyBites article: Module of the Week - Requests-cache "
         "for Repeated API Calls - http://pybit.es/requests-cache.html "

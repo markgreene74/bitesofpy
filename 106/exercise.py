@@ -28,18 +28,18 @@ vowels = "aeiou"
 
 def strip_vowels(text: str) -> (str, int):
     """Replace all vowels in the input text string by a star
-       character (*).
-       Return a tuple of (replaced_text, number_of_vowels_found)
+    character (*).
+    Return a tuple of (replaced_text, number_of_vowels_found)
 
-       So if this function is called like:
-       strip_vowels('hello world')
+    So if this function is called like:
+    strip_vowels('hello world')
 
-       ... it would return:
-       ('h*ll* w*rld', 3)
+    ... it would return:
+    ('h*ll* w*rld', 3)
 
-       The str/int types in the function defintion above are part
-       of Python's new type hinting:
-       https://docs.python.org/3/library/typing.html"""
+    The str/int types in the function defintion above are part
+    of Python's new type hinting:
+    https://docs.python.org/3/library/typing.html"""
     newtext = re.sub("[aeiouAEIOU]", "*", text)
     counter = len(re.findall("\*", newtext)) - len(re.findall("\*", text))
     return newtext, counter

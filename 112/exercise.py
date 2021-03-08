@@ -23,7 +23,7 @@ Validator = namedtuple("Validator", "range regex")
 
 def parse_social_platforms_string():
     """Convert the social_platforms string above into a dict where
-       keys = social platformsname and values = validator namedtuples"""
+    keys = social platformsname and values = validator namedtuples"""
     data = defaultdict(Validator)
     for i in social_platforms.split("\n\n"):
         # try, just in case there is any surprise
@@ -48,8 +48,8 @@ def parse_social_platforms_string():
 
 def validate_username(platform, username):
     """Receives platforms(Twitter, Facebook or Reddit) and username string,
-       raise a ValueError if the wrong platform is passed in,
-       return True/False if username is valid for entered platform"""
+    raise a ValueError if the wrong platform is passed in,
+    return True/False if username is valid for entered platform"""
     all_validators = parse_social_platforms_string()
     if platform in all_validators.keys():
         validator = all_validators[platform]

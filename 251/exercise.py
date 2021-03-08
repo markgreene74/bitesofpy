@@ -41,6 +41,7 @@ def object_values_series() -> pd.Series:
         [i for i in string.ascii_uppercase], index=[j for j in range(101, 127)]
     )
 
-'''
+
+"""
 Resolution time: ~53 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 14 min. 💪
-'''
+"""

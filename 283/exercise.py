@@ -8,6 +8,7 @@ def tomorrow(someday=None):
     one_day = datetime.timedelta(days=1)
     return today + one_day
 
-'''
+
+"""
 Resolution time: ~26 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 9 min. 💪
-'''
+"""

@@ -41,7 +41,7 @@ class BiteStats:
     @property
     def number_users_solving_bites(self) -> int:
         """Get the number of unique users that resolved
-           one or more Bites"""
+        one or more Bites"""
         return len(
             set(row["user"] for row in self.rows if row["completed"].lower() == "true")
         )
@@ -49,7 +49,7 @@ class BiteStats:
     @property
     def top_bite_by_number_of_clicks(self) -> str:
         """Get the Bite that got accessed the most
-           (= in most rows)"""
+        (= in most rows)"""
         return Counter(row["bite"] for row in self.rows).most_common(1)[0][0]
 
     @property

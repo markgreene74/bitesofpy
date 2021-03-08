@@ -27,7 +27,7 @@ data = """Luke Skywalker,172,77
 
 def person_max_bmi(data=data):
     """Return (name, BMI float) of the character in data that
-       has the highest BMI (rounded on 2 decimals)"""
+    has the highest BMI (rounded on 2 decimals)"""
     characters = defaultdict(float)
 
     for line in reader(data.splitlines()):

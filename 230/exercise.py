@@ -25,6 +25,7 @@ class Thumbs:
     def __rmul__(self, other):
         return self.__mul__(other)
 
-'''
+
+"""
 Resolution time: ~40 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 21 min. 💪
-'''
+"""

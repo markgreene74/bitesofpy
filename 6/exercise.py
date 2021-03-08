@@ -22,16 +22,16 @@ Stats = namedtuple("Stats", "user challenge")
 def gen_files():
     """Return a generator of dir names reading in tempfile
 
-       tempfile has this format:
+    tempfile has this format:
 
-       challenge<int>/file_or_dir<str>,is_dir<bool>
-       03/rss.xml,False
-       03/tags.html,False
-       ...
-       03/mridubhatnagar,True
-       03/aleksandarknezevic,True
+    challenge<int>/file_or_dir<str>,is_dir<bool>
+    03/rss.xml,False
+    03/tags.html,False
+    ...
+    03/mridubhatnagar,True
+    03/aleksandarknezevic,True
 
-       -> use last column to filter out directories (= True)
+    -> use last column to filter out directories (= True)
     """
     with open(tempfile) as f:
         for line in f:
@@ -41,10 +41,10 @@ def gen_files():
 
 def diehard_pybites():
     """Return a Stats namedtuple (defined above) that contains the user that
-       made the most PRs (ignoring the users in IGNORE) and a challenge tuple
-       of most popular challenge and the amount of PRs for that challenge.
-       Calling this function on the dataset (held tempfile) should return:
-       Stats(user='clamytoe', challenge=('01', 7))
+    made the most PRs (ignoring the users in IGNORE) and a challenge tuple
+    of most popular challenge and the amount of PRs for that challenge.
+    Calling this function on the dataset (held tempfile) should return:
+    Stats(user='clamytoe', challenge=('01', 7))
     """
     bundle = list(gen_files())
     users = Counter([x.split("/")[1] for x in bundle])

@@ -74,6 +74,6 @@ def sort_books_by_published_date(books=books):
     return sorted(books, key=lambda x: x[3])
 
 
-'''
+"""
 Resolution time: ~29 min. (avg. submissions of 5-240 min.) - awesome, you solved it in 9 min. 💪
-'''
+"""

@@ -42,4 +42,3 @@ class BiteChallenge(Challenge):
     @property
     def pretty_title(self):
         return f"Bite {self.number}. {self.title}"
-

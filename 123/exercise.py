@@ -23,8 +23,8 @@ friendships = [
 
 def get_friend_with_most_friends(friendships=friendships):
     """Receives the friendships list of user ID pairs,
-       parse it to see who has most friends, return a tuple
-       of (name_friend_with_most_friends, his_or_her_friends)"""
+    parse it to see who has most friends, return a tuple
+    of (name_friend_with_most_friends, his_or_her_friends)"""
     # build a dict of whos's friend with whom
     d = defaultdict(list)
     for k, v in users.items():
