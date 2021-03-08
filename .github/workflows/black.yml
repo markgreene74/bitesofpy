@@ -19,18 +19,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install black==20.8b1
-    - name: Run black (write the files)
-      run: |
-        if [ -f ${task-trigger} ]; then
-          echo "The file ${task-trigger} exists, running black without the --check flag"
-          black .
-        else
-          echo "The file ${task-trigger} doesn't exist, do nothing"
-        fi
-    - name: Run black (use --check, don't write the files)
+    - name: Run black
       run: |
         black --version
-        black --check .
+        if [ -f ${task-trigger} ]; then
+          echo "The file ${task-trigger} exists, run black, write changes"
+          black .
+        else
+          echo "The file ${task-trigger} doesn't exist, run black with the --check option, do not write changes"
+          black --check .
+        fi
     - name: Commit and push if changed
       run: |-
         git diff
