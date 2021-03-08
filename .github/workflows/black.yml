@@ -7,7 +7,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      task-trigger: .push
+      TASK_TRIGGER: .push
 
     steps:
     - uses: actions/checkout@v2
@@ -22,11 +22,11 @@ jobs:
     - name: Run black
       run: |
         black --version
-        if [ -f ${task-trigger} ]; then
-          echo "The file ${task-trigger} exists, run black, write changes"
+        if [ -f ${TASK_TRIGGER} ]; then
+          echo "The file ${TASK_TRIGGER} exists, run black, write changes"
           black .
         else
-          echo "The file ${task-trigger} doesn't exist, run black with the --check option, do not write changes"
+          echo "The file ${TASK_TRIGGER} doesn't exist, run black with the --check option, do not write changes"
           black --check .
         fi
     - name: Commit and push if changed
