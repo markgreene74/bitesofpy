@@ -1,4 +1,4 @@
-https://codechalleng.es/bites/42/
+# https://codechalleng.es/bites/42/
 import random
 
 MAX_GUESSES = 5
