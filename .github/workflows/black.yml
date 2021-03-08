@@ -37,5 +37,5 @@ jobs:
         git config --global user.email "actions@users.noreply.github.com"
         git config --global user.name "run-black-bot"
         git add -A
-        git commit -m "format code using black" || exit 0
+        git commit -m "code style: black" || exit 0
         git push
