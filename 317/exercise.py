@@ -20,7 +20,7 @@ class MovieRented(NamedTuple):
 
 def download_pickle_file():
     """download a pickle file we created with a
-       list of namedtuples
+    list of namedtuples
     """
     urlretrieve(f"{S3}/bite317.pkl", PICKLE_INFILE)
 
