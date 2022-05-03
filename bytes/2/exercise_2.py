@@ -31,7 +31,7 @@ def get_all_hashtags_and_links():
 
 
 def match_first_paragraph():
-    """Write a regular expression that returns  'pybites != greedy' """
+    """Write a regular expression that returns  'pybites != greedy'"""
     html = "<p>pybites != greedy</p>" "<p>not the same can be said REgarding ...</p>"
     found = ""
     found = re.search("pybites.*greedy", html)[0]

@@ -38,7 +38,7 @@ def decode(short_url: str) -> int:
     _index = 0
     for i in short_url:
         power = url_lenght - (_index + 1)
-        result += CODEX.index(i) * (BASE ** power)
+        result += CODEX.index(i) * (BASE**power)
         _index += 1
     return result
 

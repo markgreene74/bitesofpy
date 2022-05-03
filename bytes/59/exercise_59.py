@@ -10,7 +10,7 @@ class MultiplicationTable:
 
     def __len__(self):
         """Returns the area of the table (len x* len y)"""
-        return self.length ** 2
+        return self.length**2
 
     def __str__(self):
         """Returns a string representation of the table"""
